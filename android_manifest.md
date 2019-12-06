@@ -45,4 +45,34 @@
                                     "stateAlwaysVisible", "adjustUnspecified",
                                     "adjustResize", "adjustPan"] >   
     </activity>
+| 属性 | 解析 |
+|:-:|:-:|
+|alwaysRetainTaskState|是否保留状态不变，如切屏|
+|clearTaskOnLaunch|重新回到Activity中时，是否显示跳转过程。如：ActivityA启动ActivityB后，回到home，再回到ActivityB，是否显示ActivityA跳转到ActviityB的过程|
+|configChnages|当配置list发生修改时， 调用onConfigurationChanged()|
+|excludeFromRecents|是否可被显示在最近打开的activity列表里，默认false|
+|finishOnTaskLaunch|重启任务时，是否显示已打开的Activity，默认false。与allowTaskReparenting配合使用|
+|launchMode|加载模式|
+|multiprocess|是否允许多进程，默认false|
+|noHistory|Activity不可见时，是否从Activity stack中清除并结束，默认false|
+|screenOrientation|屏幕显示模式。unspecified：系统自动判断|
+|landscape|横屏|
+|portrait|竖屏|
+|user|用户当前首选方向|
+|behind|与跳转的Activity一致|
+|sensor|由物理感应起决定|
+|nosensor|忽略物理感应器|
+|stateNotNeeded|activity被销毁或者成功重启时是否保存状态|
+|windowSoftInputMode| 软键盘交互模式，Android1.5新特性|
+|stateUnspecified|软键盘的状态并没有指定，系统将选择一个合适的状态或依赖于主题的设置|
+|stateUnchanged|当这个activity出现时，软键盘将一直保持在上一个activity里的状态，无论是隐藏还是显示|
+|stateHidden|用户选择activity时，软键盘总是被隐藏|
+|stateAlwaysHidden|当该Activity主窗口获取焦点时，软键盘也总是被隐藏的|
+|stateVisible|软键盘通常是可见的|
+|stateAlwaysVisible|用户选择activity时，软键盘总是显示的状态|
+|adjustUnspecified|默认设置，通常由系统自行决定是隐藏还是显示|
+|adjustResize|该Activity总是调整屏幕的大小以便留出软键盘的空间|
+|adjustPan|当前窗口的内容将自动移动以便当前焦点从不被键盘覆盖和用户能总是看到输入内容的部分|
+# intent-filter属性
+
 
