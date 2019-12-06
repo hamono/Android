@@ -38,7 +38,25 @@
         android:taskAffinity="string"
         android:theme="resource or theme" >
     </application>
-
+|属性|解析|
+|:-:|:-:|
+|allowClearUserData|用户是否能选择自行清除数据，默认true(在应用详情中的“清除数据”按钮)|
+|allowTaskReparenting|是否允许activity更换从属的任务，如从短信息任务切换到浏览器任务|
+|backupAgent|Android2.2新特性，设置该APP的备份，一般设置为类名。不设置时，不备份|
+|debuggable|是否可被调试，默认false。如设置为false的情况下进行调试会报错：Device XXX requires that applications explicitely declare themselves as debuggable in their manifest.Application XXX does not have the attribute ‘debuggable’ set to TRUE in its manifest and cannot be debugged.|
+|description\label|许可相关，label为许可列表，description为许可详细信息|
+|enabled|Android系统是否能够实例化该应用程序的组件。true：每个组件的enabled属性决定那个组件是否可以被实例化。false：所有组件均不能实例化|
+|hasCode|是否加载java代码。Android2.3后可用标准C来开发APP|
+|icon|APP的图标|
+|killAfterRestore||
+|manageSpaceActivity||
+|name|注册自定义类继承Application类。如该自定义类在package下，则直接声明，如：android:name=”MyApplication”。否则使用全路径，如：android:name=”package名称.子包名.MyApplication”|
+|permission|设置各组件默认许可名，因此可以被各组件设置的许可名所覆盖|
+|presisitent|设置是否一直保持运行状态，默认false。|
+|process|进程名，如不设置，则默认包名。在两个或多个应用程序共享一个用户ID及被赋予了相同证书的时候可以设置相同的进程名。可以被各组件设置的进程名所覆盖|
+|restoreAnyVersion|android2.2新特性，是否准备尝试恢复所有的备份，默认false|
+|taskAffinity|拥有相同的affinity的Activity理论上属于相同的Task。具体见Activity的加载原理|
+|theme|默认的主题风格，各Activity可覆盖|
 
 # Activity属性
     <activity 
