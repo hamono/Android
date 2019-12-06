@@ -19,31 +19,60 @@
 | installLocation | 安装参数，Android 2.2新增。包含三个属性：internalOnly、auto、preferExternal。preferExternal：优先考虑将APK安装到SD卡上，最终决定权在用户；auto：系统自动判断；internalOnly：必须安装到内部内存中 |
 # Application属性
     <application>
-        android:allowClearUserData=["ture" | "flase"]
-        android:allowTaskReparenting=["ture" | "flase"]
-        android:clearTaskOnLaunch=["true" | "false"]
-        android:configChanges=["mcc", "mnc", "locale","touchscreen","keyboard","keyboardHidden","navigation","orientation","screenLayout","fontScale", "uiMode"]
+        android:allowClearUserData=["true" | "false"]
+        android:allowTaskReparenting=["true" | "false"]
+        android:backupAgent="string"
+        android:debuggable=["true" | "false"]
+        android:description="string resource"
         android:enabled=["true" | "false"]
-        android:excludeFromRecents=["true" | "false"]
-        android:exported=["true" | "false"]
-        android:finishOnTaskLaunch=["true" | "false"]
+        android:hasCode=["true" | "false"]
         android:icon="drawable resource"
+        android:killAfterRestore=["true" | "false"]
         android:label="string resource"
-        android:launchMode=["multiple" | "singleTop" | "singleTask" | "singleInstance"]
-        android:multiprocess=["true" | "false"]
+        android:manageSpaceActivity="string"
         android:name="string"
-        android:noHistory=["true" | "false"]  
         android:permission="string"
+        android:persistent=["true" | "false"]
         android:process="string"
-        android:screenOrientation=["unspecified" | "user" | "behind" | "landscape" | "portrait" | "sensor" | "nosensor"]
-        android:stateNotNeeded=["true" | "false"]
+        android:restoreAnyVersion=["true" | "false"]
         android:taskAffinity="string"
-        android:theme="resource or theme"
-        android:windowSoftInputMode=["stateUnspecified",
-                                    "stateUnchanged", "stateHidden",
-                                    "stateAlwaysHidden", "stateVisible",
-                                    "stateAlwaysVisible", "adjustUnspecified",
-                                    "adjustResize", "adjustPan"] >   
+        android:theme="resource or theme" >
+    </application>
+
+
+# Activity属性
+    <activity 
+	android:allowTaskReparenting=["true" | "false"]
+	android:alwaysRetainTaskState=["true" | "false"]
+	android:clearTaskOnLaunch=["true" | "false"]
+	android:configChanges=["mcc", "mnc", "locale",
+	                       "touchscreen", "keyboard", "keyboardHidden",
+	                       "navigation", "orientation", "screenLayout",
+	                       "fontScale", "uiMode"]
+	android:enabled=["true" | "false"]
+	android:excludeFromRecents=["true" | "false"]
+	android:exported=["true" | "false"]
+	android:finishOnTaskLaunch=["true" | "false"]
+	android:icon="drawable resource"
+	android:label="string resource"
+	android:launchMode=["multiple" | "singleTop" |
+	                    "singleTask" | "singleInstance"]
+	android:multiprocess=["true" | "false"]
+	android:name="string"
+	android:noHistory=["true" | "false"]  
+	android:permission="string"
+	android:process="string"
+	android:screenOrientation=["unspecified" | "user" | "behind" |
+	                           "landscape" | "portrait" |
+	                           "sensor" | "nosensor"]
+	android:stateNotNeeded=["true" | "false"]
+	android:taskAffinity="string"
+	android:theme="resource or theme"
+	android:windowSoftInputMode=["stateUnspecified",
+	                             "stateUnchanged", "stateHidden",
+	                             "stateAlwaysHidden", "stateVisible",
+	                             "stateAlwaysVisible", "adjustUnspecified",
+	                             "adjustResize", "adjustPan"] >   
     </activity>
 | 属性 | 解析 |
 |:-:|:-:|
